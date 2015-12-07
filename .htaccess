@@ -1,1 +1,29 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
 
+# Strip UTM
+RewriteCond %{QUERY_STRING} ^((.*?)&|)utm_
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1?%2 [R=301,NE,L]
+
+# Redirect all links on Search Engines
+RewriteRule ^table/about-us/Page-2$ http://www.struto.co.uk/about-us [R=301,L]
+RewriteRule ^table/careers$ http://www.struto.co.uk/inbound-marketing-careers [R=301,L]
+RewriteRule ^careers/front-end-web-developer$ http://www.struto.co.uk/front-end-web-developer [R=301,L]
+RewriteRule ^careers/ux-designer$ http://www.struto.co.uk/design-team-leader [R=301,L]
+RewriteRule ^careers/content-marketer$ http://www.struto.co.uk/inbound-marketing-careers [R=301,L]
+RewriteRule ^careers/marketing-assistant$ http://www.struto.co.uk/inbound-marketing-careers [R=301,L]
+RewriteRule ^careers/senior-web-developer$ http://www.struto.co.uk/inbound-marketing-careers [R=301,L]
+RewriteRule ^careers/inbound-marketing-assistant$ http://www.struto.co.uk/inbound-marketing-careers [R=301,L]
+RewriteRule ^careers/experienced-web-developer$ http://www.struto.co.uk/inbound-marketing-careers [R=301,L]
+RewriteRule ^careers/junior-graphic-designer$ http://www.struto.co.uk/inbound-marketing-careers [R=301,L]
+RewriteRule ^careers/mid-level-web-developer$ http://www.struto.co.uk/inbound-marketing-careers [R=301,L]
+RewriteRule ^careers/junior-joomla-web-developer$ http://www.struto.co.uk/inbound-marketing-careers [R=301,L]
+RewriteRule ^careers/inbound-marketing-content-marketing-executive$ http://www.struto.co.uk/inbound-marketing-careers [R=301,L]
+RewriteRule ^careers/digital-project-manager-customer-relationship-management$ http://www.struto.co.uk/inbound-marketing-careers [R=301,L]
+RewriteRule ^careers/digital-project-manager-customer-relationship-management http://www.struto.co.uk/inbound-marketing-careers [R=301,L]
+RewriteRule ^careers/junior-joomla-web-developer http://www.struto.co.uk/inbound-marketing-careers [R=301,L]
+RewriteRule ^lang=en&utm_content=5859917&utm_medium=social&utm_source=twitter http://www.struto.co.uk/inbound-marketing-careers [R=301,L]
+
+#RewriteRule ^(.*)$ http://www.struto.co.uk/$1 [R=301,L]
+## End
