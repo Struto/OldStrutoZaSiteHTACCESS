@@ -6,6 +6,9 @@ RewriteBase /
 RewriteCond %{QUERY_STRING} ^((.*?)&|)utm_
 RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1?%2 [R=301,NE,L]
 
+# Redirect domain to struto.co.uk
+RewriteRule ^(.*)$ http://www.struto.co.uk/$1 [R=301,L]
+
 # Redirect all links on Search Engines
 RewriteRule ^table/about-us/Page-2$ http://www.struto.co.uk/about-us [R=301,L]
 RewriteRule ^table/careers$ http://www.struto.co.uk/inbound-marketing-careers [R=301,L]
